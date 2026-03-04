@@ -1,0 +1,24 @@
+{
+  "id": "upload-plus-api",
+  "description": "Enhanced file upload with custom paths and WebP conversion",
+  "url": "https://github.com/KirillJsx/nodebb-plugin-upload-api",
+  "hooks": [
+    {
+      "hook": "static:app.load",
+      "method": "init"
+    },
+    {
+      "hook": "filter:uploadStored",
+      "method": "filterUploadStored"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "addAdminNavigation"
+    }
+  ],
+  "modules": {
+    "../admin/plugins/upload-plus.js": "static/lib/admin.js"
+  },
+  "languages": "languages",
+  "templates": "templates"
+}

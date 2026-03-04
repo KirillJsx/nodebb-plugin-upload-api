@@ -1,0 +1,58 @@
+{
+  "name": "nodebb-plugin-upload-plus-api",
+  "version": "0.2.5",
+  "description": "Advanced upload plugin for NodeBB with sub-folder strategy and optional WebP conversion and api",
+  "keywords": [
+    "forum",
+    "nodebb",
+    "plugin",
+    "hash",
+    "upload",
+    "webp",
+    "storage",
+    "file management",
+    "sha256",
+    "sub-folder"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KirillJsx/nodebb-plugin-upload-api"
+  },
+  "readme": "README.md",
+  "license": "MIT",
+  "author": {
+    "name": "KirillJsx",
+    "email": "kdvoryaninov@yandex.ru"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "nbbpm": {
+    "compatibility": "^4.0.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "main": "./library.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "sharp": "^0.34.3"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.8.1",
+    "@commitlint/config-angular": "19.8.1",
+    "eslint": "9.34.0",
+    "eslint-config-nodebb": "1.1.11",
+    "husky": "9.1.7",
+    "lint-staged": "16.1.5"
+  }
+}
